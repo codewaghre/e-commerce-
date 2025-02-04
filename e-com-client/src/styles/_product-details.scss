@@ -1,0 +1,388 @@
+.product-details {
+    padding: 4rem;
+    margin-top: -20px;
+
+    >main {
+        display: flex;
+        max-width: 1920px;
+        width: 100%;
+        margin: auto;
+
+        >section {
+            &:first-of-type {
+                width: 40%;
+                // height: 60vh;
+            }
+
+            &:last-of-type {
+                width: 60%;
+                min-height: 80vh;
+                padding-left: 4rem;
+
+                h1 {
+                    font-size: 2rem;
+                    margin: 0rem 0;
+                }
+
+                code {
+                    font-size: 0.8rem;
+                    background-color: rgb(5, 107, 224);
+                    color: white;
+                    border-radius: 10px;
+                    padding: 0.25rem 0.5rem;
+                }
+
+                article {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 1rem;
+                    margin: 1rem 0;
+
+                    >div {
+                        width: 9rem;
+                        @include flex(row, space-between);
+
+                        button {
+                            border: none;
+                            @include square(3rem);
+                            border-radius: 5px;
+                            @include flex;
+                            cursor: pointer;
+                            font-size: 1.2rem;
+
+                            &:hover {
+                                background-color: $color2;
+                                color: $color1;
+                            }
+                        }
+                    }
+
+                    >button {
+                        width: 9rem;
+                        background-color: $color3;
+                        padding: 1rem;
+                        border: none;
+                        cursor: pointer;
+                        color: $color1;
+                        @include flex;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        border-radius: 5px;
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+
+                h3 {
+                    font-size: 2rem;
+                    margin: 0rem 0;
+                    color: black;
+                }
+
+                p {
+                    font-size: 1rem;
+                    margin: 1rem 0;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                    line-height: 150%;
+                }
+            }
+        }
+    }
+
+    >section {
+        max-width: 1920px;
+        width: 100%;
+        margin: auto;
+
+        >article {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            >h2 {
+                @include heading;
+            }
+
+            >button {
+                background-color: rgb(29, 29, 29);
+                border: none;
+                cursor: pointer;
+                color: white;
+                border-radius: 50%;
+                width: 3rem;
+                height: 3rem;
+                display: grid;
+                place-items: center;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.carousel-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+
+.review-dialog {
+    width: 30rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    border: none;
+    border-radius: 0.5rem;
+
+    >button {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        background-color: rgb(29, 29, 29);
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        display: grid;
+        place-items: center;
+        font-size: 1.5rem;
+    }
+
+    >h2 {
+        @include heading;
+    }
+
+    >form {
+        margin: 1rem 0;
+        @include flex(column);
+
+        >textarea {
+            min-height: 25vh;
+            padding: 1rem;
+            border: 1px solid rgb(29, 29, 29);
+            border-radius: 5px;
+            font-size: 1.2rem;
+            width: 100%;
+        }
+
+        >button {
+            width: 100%;
+            background-color: rgb(29, 29, 29);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 1rem;
+            border-radius: 5px;
+            font-size: 1.2rem;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+.review {
+    position: relative;
+    width: 45rem;
+    flex: none;
+    background-color: rgb(244, 244, 244);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+
+    p {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+
+    >div {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        img {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+        }
+
+        small {
+            color: $color3;
+        }
+    }
+
+    >button {
+        position: absolute;
+        top: -1.25rem;
+        right: -1.25rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: rgb(29, 29, 29);
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: 1.25rem;
+    }
+}
+
+
+
+.order-container {}
+
+
+.order-management {
+    @include flex(row, center, unset);
+    padding: 4rem;
+
+    >section {
+        overflow-y: auto;
+        width: 100%;
+        height: 75vh;
+        max-width: 500px;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.216);
+        background-color: white;
+        padding: 5rem;
+        @include flex(column, unset, unset, 1rem);
+        position: relative;
+        border-radius: 5px;
+
+        >h2 {
+            @include heading(2px);
+            text-align: center;
+        }
+
+        >img {
+            @include square(100%);
+            object-fit: contain;
+        }
+
+        >strong {
+            font-weight: 300;
+        }
+
+        >span {
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+        }
+
+        >p {
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        >h3 {
+            text-align: center;
+            font-size: 2rem;
+        }
+    }
+
+    >article {
+        height: 75vh;
+        padding: 2rem;
+        width: 100%;
+        max-width: 400px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.216);
+        position: relative;
+
+        >form {
+            @include flex(column, unset, center, 2rem);
+
+            >h2 {
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+            >img {
+                @include square(5rem);
+                object-fit: cover;
+                border-radius: 5px;
+            }
+
+            >div {
+                width: 100%;
+                position: relative;
+
+                >label {
+                    position: absolute;
+                    left: 0;
+                    top: -1.5rem;
+                }
+
+                >input {
+                    @include inputStyle(100%,
+                        1rem,
+                        unset,
+                        1px solid rgba(13, 13, 13, 0.196));
+                    border-radius: 5px;
+                }
+            }
+
+            >button {
+                padding: 1rem;
+                border: none;
+                background-color: rgb(5, 107, 224);
+                color: white;
+                width: 100%;
+                border-radius: 5px;
+                font-size: 1.1rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .shipping-info-card {
+        >h1 {
+            text-align: center;
+            @include heading(2px);
+        }
+
+        >h5 {
+            margin: 2rem 0 0 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        >p {
+            margin: 0.5rem;
+        }
+
+        >.shipping-btn {
+            margin: 2rem 0;
+            padding: 1rem;
+            border: none;
+            background-color: rgb(5, 107, 224);
+            color: white;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}

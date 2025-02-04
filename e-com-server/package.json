@@ -1,0 +1,47 @@
+{
+  "name": "e-commerce-backend",
+  "version": "1.0.0",
+  "description": "e-commerce website in mern stack",
+  "main": "./dist/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node dist/app.js",
+    "build": "tsc.cmd",
+    "watch": "tsc.cmd -w",
+    "dev": "nodemon dist/app.js"
+  },
+  "keywords": [
+    "backend",
+    "mern",
+    "node",
+    "express",
+    "mongodb"
+  ],
+  "author": "Abhishek Waghre",
+  "license": "ISC",
+  "dependencies": {
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
+    "cloudinary": "^2.5.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "stripe": "^17.6.0",
+    "uuid": "^11.0.5",
+    "validator": "^13.12.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.9",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.12.0",
+    "@types/uuid": "^10.0.0",
+    "@types/validator": "^13.12.2",
+    "nodemon": "^3.1.9",
+    "typescript": "^5.7.3"
+  }
+}
